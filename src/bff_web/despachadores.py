@@ -8,6 +8,7 @@ class Despachador:
         ...
 
     async def publicar_mensaje(self, mensaje, topico, schema):
+        print("ENTRA EN PUBLICAR MENSAJE TOPICOS")
         json_schema = utils.consultar_schema_registry(schema)  
         avro_schema = utils.obtener_schema_avro_de_diccionario(json_schema)
 

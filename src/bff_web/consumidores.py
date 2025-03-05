@@ -7,6 +7,7 @@ from pulsar.schema import *
 from . import utils
 
 async def suscribirse_a_topico(topico: str, suscripcion: str, schema: str, tipo_consumidor:_pulsar.ConsumerType=_pulsar.ConsumerType.Shared, eventos=[]):
+    print("ENTRA EN SUSCRIBIR TOPICOS")
     try:
         json_schema = utils.consultar_schema_registry(schema)  
         avro_schema = utils.obtener_schema_avro_de_diccionario(json_schema)
