@@ -11,6 +11,7 @@ AEROALPES_HOST = os.getenv("AEROALPES_ADDRESS", default="localhost")
 FORMATO_FECHA = '%Y-%m-%dT%H:%M:%SZ'
 
 def obtener_reservas(root) -> typing.List["Reserva"]:
+    print("ENTRA  METODO QUE EJECUTA EL ENDOPOINT")
     reservas_json = requests.get(f'http://{AEROALPES_HOST}:5000/vuelos/reserva').json()
     reservas = []
 

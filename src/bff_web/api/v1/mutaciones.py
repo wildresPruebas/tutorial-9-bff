@@ -13,6 +13,7 @@ class Mutation:
     # TODO Agregue objeto de itinerarios o reserva
     @strawberry.mutation
     async def crear_reserva(self, id_usuario: str, id_correlacion: str, info: Info) -> ReservaRespuesta:
+        print("ENTRA EN MUTACION CREAR RESERVA")
         print(f"ID Usuario: {id_usuario}, ID Correlación: {id_correlacion}")
         payload = dict(
             id_usuario = id_usuario,
